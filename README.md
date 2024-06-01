@@ -3,10 +3,8 @@
 ReactBot is a chatbot project developed using React and FastAPI, integrating OpenAI's Whisper API using Chat GPT-4o backend and Eleven Labs' Text-to-Speech (TTS) API. It functions as a digital research assistant, particularly in the field of organic chemistry. However, it can be modified for any task.
 
 ## Demo
-<video width="600" controls>
-  <source src="https://github.com/slbouknight/react-bot/blob/main/assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/slbouknight/react-bot/assets/81126905/41f89563-9ca5-42a5-8504-8020d577ab0b
+
 
 ## Features
 - Organic Chemistry Help
