@@ -1,6 +1,6 @@
 # ReactBot
 
-ReactBot is a chatbot project developed using React and FastAPI, integrating OpenAI's Whisper API using GPT-4o backend and Eleven Labs' Text-to-Speech (TTS) API. It functions as a digital research assistant, particularly in the field of organic chemistry. However, it can be modified for any task.
+ReactBot is a chatbot project developed using React and FastAPI, integrating OpenAI's Whisper API using Chat GPT-4o backend and Eleven Labs' Text-to-Speech (TTS) API. It functions as a digital research assistant, particularly in the field of organic chemistry. However, it can be modified for any task.
 
 ## Demo
 
@@ -17,22 +17,23 @@ ReactBot is a chatbot project developed using React and FastAPI, integrating Ope
     cd react-bot
     ```
 
-2. **Activate the Provided Virtual Environment**:
+2. **Backend Setup**:
     - On Windows:
       ```bash
       cd backend
+      python -m venv venv
       .\venv\Scripts\activate
-      ```
-    - On macOS/Linux:
-      ```bash
-      cd backend
-      source venv/bin/activate
+      pip install openai==0.27.0 python-decouple==3.8 python-multipart==0.0.6 requests==2.28.2 fastapi==0.92.0 "uvicorn[standard]"
       ```
 
-3. **Verify the Virtual Environment**:
-    ```bash
-    pip list
-    ```
+3. **Frontend Setup**:
+    - On Windows:
+      ```bash
+      cd frontend
+      yarn create vite .
+      Select React and TypeScript when prompted
+      yarn --exact
+      ```
 
 4. **Set Up Environment Variables**:
     Modify `.env` file in the `backend` directory and add your API keys. Requires free or possibly paid subscription to OpenAI and Eleven Labs APIs.
@@ -42,9 +43,20 @@ ReactBot is a chatbot project developed using React and FastAPI, integrating Ope
     ELEVEN_LABS_API_KEY=your_elevenlabs_api_key
     ```
 
-5. **Run the Application**:
+5. **Run the Application Locally**:
+   Activate backend in terminal
     ```bash
-    uvicorn main:app --reload
+    cd backend
+    uvicorn main:app
     ```
+    Activate frontend in separate terminal
+   ```bash
+    cd frontend
+    yarn build
+   yarn start
+    ```
+   Go to the localhost link displayed after yarn start and app will be running
 
 ## Usage
+
+
