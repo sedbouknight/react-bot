@@ -51,12 +51,15 @@ ReactBot is a chatbot project developed using React and FastAPI, integrating Ope
     ```
     Activate frontend in separate terminal
    ```bash
-    cd frontend
-    yarn build
+   cd frontend
+   yarn build
    yarn start
     ```
    Go to the localhost link displayed after yarn start and app will be running
 
 ## Usage
+Press the record button and start speaking your prompt into the microphone. Once you're done click the button again to stop recording, and ReactBot will respond.
+Audio playback is also available for you and ReactBot's messages between each other.
+Refresh button at the top right will clear conversation history.
 
 
